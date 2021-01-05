@@ -3,8 +3,8 @@
   <!-- Drag n Drop theme Starts -->
   <div *ngIf="theme == 'dragNDrop'" id="dragNDrop"
     [ngClass]="(hideSelectBtn && hideResetBtn) ? null : 'dragNDropBtmPad'" class="dragNDrop">
-    <div style="position:relative;">
-      <div id="div1" class="div1 afu-dragndrop-box" (drop)="drop($event)" (dragover)="allowDrop($event)">
+    <div class="center" style="position:relative; width: 70%; margin: 0 auto;">
+      <div id="div1" class="div1 afu-dragndrop-box" style="position:relative; width: 70%; margin: 0 auto;" (drop)="drop($event)" (dragover)="allowDrop($event)">
         <p class="afu-dragndrop-text">{{replaceTexts?.dragNDropBox}}</p>
       </div>
       <!-- <span class='label label-info' id="upload-file-info{{id}}">{{allowedFiles[0]?.name}}</span> -->
@@ -40,7 +40,7 @@
         class="fa fa-times"></i></a>
   </div>
 
-  <p *ngIf="uploadMsg" class="{{uploadMsgClass}} + afu-upload-status">{{uploadMsgText}}<p>
+  <!-- <p *ngIf="uploadMsg" class="{{uploadMsgClass}} + afu-upload-status">{{uploadMsgText}}<p>
       <div *ngIf="!isAllowedFileSingle && progressBarShow && !hideProgressBar">
         <div class="progress col-xs-4 padMarg afu-progress-bar">
           <span class="progress-bar progress-bar-success" role="progressbar"
@@ -52,7 +52,7 @@
       <button class="btn btn-success afu-upload-btn" type="button" (click)="uploadFiles()"
         [disabled]=!enableUploadBtn>{{replaceTexts?.uploadBtn}}</button>
       <br>
-</div>
+</div> -->
 
 <!--/////////////////////////// ATTACH PIN THEME  //////////////////////////////////////////////////////////-->
 <div *ngIf="theme == 'attachPin'" id="attachPin">
